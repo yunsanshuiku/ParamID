@@ -120,7 +120,14 @@ def _convert(na, nb, nk, intercept, dt, coefficients):
         augmented[:order, order:] = forcing / scales
         with warnings.catch_warnings(record=True):
             warnings.simplefilter("always")
-            logarithm, estimated_error = logm(augmented, disp=False)
+            # SciPy < 1.17 exposed ``disp=False`` and returned its residual
+            # estimate as a second value.  Newer versions removed that
+            # argument, so calculate the same normalized reconstruction
+            # residual explicitly.  This also keeps the acceptance threshold
+            # independent of SciPy's warning/display API.
+            logarithm = logm(augmented)
+        estimated_error = (np.linalg.norm(expm(logarithm) - augmented, ord=1)
+                           / max(np.linalg.norm(augmented, ord=1), np.finfo(float).tiny))
         if not np.all(np.isfinite(logarithm)) or not np.isfinite(estimated_error) or estimated_error > 1e-8:
             result["reason"] = "矩阵对数未达到数值精度要求，未生成连续模型。"
             return result
