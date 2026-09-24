@@ -82,7 +82,7 @@ try{
   ({sessionId:session}=await command('Target.attachToTarget',{targetId,flatten:true},null));
   await command('Runtime.enable');await command('Page.enable');
   await command('Emulation.setDeviceMetricsOverride',{width:1500,height:1080,deviceScaleFactor:1,mobile:false});
-  await until(()=>evaluate('!!document.getElementById("regressionDemo")'));
+  await until(()=>evaluate('typeof state!=="undefined"&&!!document.getElementById("regressionDemo")'));
   // The user's workflow: import shuffled input*/output* headers, with no manual
   // channel mapping; fit, switch output, inspect every path and export all data.
   await upload('#dataFile',path.join(root,'examples','multichannel.csv'));
