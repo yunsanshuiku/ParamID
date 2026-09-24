@@ -1,0 +1,16 @@
+ParamID 0.7.0 · Windows 桌面版
+
+安装版：双击 ParamID-Setup-0.7.0.exe，按向导安装到当前用户目录。
+便携版：解压后双击 ParamID.exe。请保持 _internal 目录与 EXE 在一起。
+也可以双击“安装 ParamID.cmd”复制到当前用户目录并创建快捷方式。
+
+运行环境：Windows 10/11 64 位，Microsoft Edge WebView2 Runtime。
+打包版本已包含 Python 和计算库，无需自行安装 Python。
+
+实验目录：%LOCALAPPDATA%\ParamID
+程序目录：%LOCALAPPDATA%\Programs\ParamID
+故障日志：%LOCALAPPDATA%\ParamID\desktop-crash.log
+
+使用安装 EXE 安装的版本，请从 Windows 设置中的“已安装的应用”卸载。
+使用便携脚本安装的版本，可运行“卸载 ParamID.cmd”。
+实验目录与程序目录分开，卸载程序保留实验数据。

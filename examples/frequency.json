@@ -1,0 +1,22 @@
+{
+  "model": {
+    "kind": "arx",
+    "input": "u",
+    "output": "y",
+    "time": "time_s",
+    "sample_time": 0.02
+  },
+  "algorithm": "frequency",
+  "frequency": {
+    "window": "hann",
+    "segment_length": 256,
+    "window_samples": 2048,
+    "update_every": 512
+  },
+  "truth": [
+    1.2,
+    -0.36,
+    0.2,
+    0.12
+  ]
+}

@@ -1,0 +1,8 @@
+# Direct dependencies verified on Windows / Python 3.10.
+# Tested baseline, not a transitive dependency lock file.
+-r requirements-desktop.txt
+numpy==2.2.6
+scipy==1.15.3
+pyserial==3.5
+pywebview==6.2.1
+pyinstaller==6.22.3

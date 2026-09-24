@@ -1,0 +1,11 @@
+{
+  "model": {
+    "kind": "arx",
+    "output": "y",
+    "input": "u",
+    "time": "time_s",
+    "sample_time": 0.01,
+    "intercept": true
+  },
+  "algorithm": "ls"
+}

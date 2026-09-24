@@ -1,0 +1,4 @@
+# Windows desktop and build dependencies.
+-r requirements.txt
+pywebview>=6.2,<7
+pyinstaller>=6.0,<7

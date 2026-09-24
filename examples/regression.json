@@ -1,0 +1,14 @@
+{
+  "model": {
+    "kind": "regression",
+    "output": "y",
+    "features": [
+      "x1",
+      "x2"
+    ],
+    "time": "time_s",
+    "sample_time": 0.01,
+    "intercept": true
+  },
+  "algorithm": "ls"
+}

@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "seed": 20260916,
+  "regression": {
+    "x1": 2.5,
+    "x2": -0.7,
+    "intercept": 0.3
+  },
+  "arx": {
+    "a1": 0.82,
+    "b0": 0.35,
+    "intercept": 0.04,
+    "noise": "white equation innovation, std=0.005"
+  }
+}
